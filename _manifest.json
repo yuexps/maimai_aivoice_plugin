@@ -1,0 +1,41 @@
+{
+  "manifest_version": 1,
+  "name": "麦麦AI语音插件",
+  "version": "1.0.0",
+  "author": {
+    "name": "yuexps",
+    "url": "https://github.com/yuexps"
+  },
+  "description": "麦麦AI语音功能扩展插件，使用QQ自带的AI文本转语音功能通过NapCat发送语音消息",
+  "license": "MIT",
+  "homepage_url": "https://github.com/yuexps/maimai_aivoice_plugin",
+  "repository_url": "https://github.com/yuexps/maimai_aivoice_plugin",
+  "host_application": {
+    "min_version": "0.11.0",
+    "max_version": "0.12.0"
+  },
+  "keywords": ["ai", "voice", "qq", "tts", "napcat", "aivoice"],
+  "categories": ["Utility Tools", "External Integration"],
+  "default_locale": "zh-CN",
+  "plugin_info": {
+    "is_built_in": false,
+    "plugin_type": "general",
+    "components": [
+      {
+        "type": "tool",
+        "name": "get_ai_character_list",
+        "description": "获取QQ群当前可用的AI语音角色列表"
+      },
+      {
+        "type": "tool",
+        "name": "send_ai_voice",
+        "description": "发送AI语音消息（输入中文角色名和文本，自动匹配角色并发送）"
+      },
+      {
+        "type": "command",
+        "name": "list_ai_characters",
+        "description": "查询并显示当前群可用的AI语音角色（命令：/ai_roles 或 /ai角色 或 /语音角色）"
+      }
+    ]
+  }
+}
