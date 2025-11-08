@@ -1,5 +1,3 @@
-"""AI角色列表查询命令 - 直接在群里显示角色列表"""
-
 from src.plugin_system import BaseCommand
 from typing import Tuple, Optional
 import aiohttp
@@ -117,14 +115,11 @@ class ListAICharactersCommand(BaseCommand):
             ""
         ]
         
-        # 按分类输出（精简格式，每行显示多个角色）
+        # 按分类输出（每个角色单独一行）
         for category, chars in categories.items():
             lines.append(f"【{category}】")
-            # 每3个角色一行
-            for i in range(0, len(chars), 3):
-                char_group = chars[i:i+3]
-                char_names = " | ".join([c['character_name'] for c in char_group])
-                lines.append(f"  {char_names}")
+            for char in chars:
+                lines.append(f"  {char['character_name']} -> {char['character_id']}")
             lines.append("")
         
         lines.append("━━━━━━━━━━━━━━━━━━━━━━")

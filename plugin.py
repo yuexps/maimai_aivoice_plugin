@@ -1,5 +1,3 @@
-"""麦麦AI语音插件主类"""
-
 from src.plugin_system import BasePlugin, register_plugin, ConfigField, ComponentInfo
 from typing import List, Tuple, Type
 
@@ -13,13 +11,11 @@ from .commands.list_characters_command import ListAICharactersCommand
 
 @register_plugin
 class AIVoicePlugin(BasePlugin):
-    """QQ AI语音插件
-    
-    使用QQ自带的AI语音功能，通过NapCat API将文本转换为语音发送到群聊。
-    提供角色查询和语音发送两个核心功能。
+    """
+    通过NapCat使用QQ自带的AI文本转语音功能为麦麦提供语音消息发送能力
     """
     
-    # 插件基本信息（必需 - 作为类属性）
+    # 插件基本信息
     plugin_name: str = "maimai_aivoice_plugin"
     enable_plugin: bool = True
     dependencies: List[str] = []
