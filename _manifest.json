@@ -11,8 +11,7 @@
   "homepage_url": "https://github.com/yuexps/maimai_aivoice_plugin",
   "repository_url": "https://github.com/yuexps/maimai_aivoice_plugin",
   "host_application": {
-    "min_version": "0.11.0",
-    "max_version": "0.12.0"
+    "min_version": "0.11.0"
   },
   "keywords": ["ai", "voice", "qq", "tts", "napcat", "aivoice"],
   "categories": ["Utility Tools", "External Integration"],
